@@ -7,7 +7,7 @@ import { getState, getTransitionHooks, getComponents, getRouteParams, createTran
 import { routes, component, components, history, location } from './PropTypes';
 import RouterContextMixin from './RouterContextMixin';
 import ScrollManagementMixin from './ScrollManagementMixin';
-import { isLocation } from './Location';
+import Location from './Location';
 import Transition from './Transition';
 
 var { arrayOf, func, object } = React.PropTypes;
@@ -115,7 +115,7 @@ var Router = React.createClass({
 
   _updateState(location) {
     invariant(
-      isLocation(location),
+      Location.isLocation(location),
       'A <Router> needs a valid Location'
     );
 
