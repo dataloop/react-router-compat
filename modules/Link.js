@@ -1,6 +1,8 @@
-import React from 'react';
+import React from 'react'
+import createReactClass from 'create-react-class'
+import PropTypes from 'prop-types'
 
-var { object, string, func } = React.PropTypes;
+var { object, string, func } = PropTypes;
 
 function isLeftClickEvent(event) {
   return event.button === 0;
@@ -28,7 +30,7 @@ function isModifiedEvent(event) {
  *
  *   <Link to="/posts/123" query={{ show:true }}/>
  */
-export var Link = React.createClass({
+export var Link = createReactClass({
 
   contextTypes: {
     router: object

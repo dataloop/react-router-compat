@@ -1,11 +1,12 @@
 import expect from 'expect';
-import React from 'react';
+import React from 'react'
+import createReactClass from 'create-react-class'
 import Route from '../Route';
 import { createRoutesFromReactChildren } from '../RouteUtils';
 
 describe('createRoutesFromReactChildren', function () {
 
-  var Parent = React.createClass({
+  var Parent = createReactClass({
     render() {
       return (
         <div>
@@ -16,13 +17,13 @@ describe('createRoutesFromReactChildren', function () {
     }
   });
 
-  var Hello = React.createClass({
+  var Hello = createReactClass({
     render() {
       return <div>Hello</div>;
     }
   });
 
-  var Goodbye = React.createClass({
+  var Goodbye = createReactClass({
     render() {
       return <div>Goodbye</div>;
     }

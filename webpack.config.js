@@ -14,6 +14,18 @@ module.exports = {
         commonjs2: 'react',
         commonjs: 'react',
         amd: 'react'
+      },
+      'prop-types': {
+        root: 'PropTypes',
+        commonjs2: 'prop-types',
+        commonjs: 'prop-types',
+        amd: 'prop-types'
+      },
+      'create-react-class': {
+        root: 'createReactClass',
+        commonjs2: 'create-react-class',
+        commonjs: 'create-react-class',
+        amd: 'create-react-class'
       }
     }
   ],

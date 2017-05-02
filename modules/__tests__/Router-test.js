@@ -1,5 +1,6 @@
 import expect from 'expect';
-import React, { render } from 'react';
+import React, { render } from 'react'
+import createReactClass from 'create-react-class'
 import MemoryHistory from '../MemoryHistory';
 import Router from '../Router';
 import Route from '../Route';
@@ -14,13 +15,13 @@ describe('Router', function () {
     React.unmountComponentAtNode(div);
   });
 
-  var Parent = React.createClass({
+  var Parent = createReactClass({
     render() {
       return <div>parent{this.props.children}</div>;
     }
   });
 
-  var Child = React.createClass({
+  var Child = createReactClass({
     render() {
       return <div>child</div>;
     }
@@ -80,14 +81,14 @@ describe('Router', function () {
   });
 
   it('renders with a custom `createElement` prop', function(done) {
-    var Wrapper = React.createClass({
+    var Wrapper = createReactClass({
       render() {
         var { Component } = this.props;
         return <Component fromWrapper="wrapped"/>
       }
     });
 
-    var Component = React.createClass({
+    var Component = createReactClass({
       render() {
         return <div>{this.props.fromWrapper}</div>;
       }

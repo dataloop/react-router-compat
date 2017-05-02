@@ -21,9 +21,12 @@
     "react": "^15.5.4"
   },
   "dependencies": {
+    "create-react-class": "15.5.2",
     "invariant": "2.0.0",
     "keymirror": "0.1.1",
+    "prop-types": "15.5.8",
     "qs": "2.4.1",
+    "react": "15.5.4",
     "warning": "1.0.1"
   },
   "devDependencies": {

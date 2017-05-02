@@ -1,6 +1,8 @@
-import React from 'react';
+import React from 'react'
+import createReactClass from 'create-react-class'
+import PropTypes from 'prop-types'
 
-var { object } = React.PropTypes;
+var { object } = PropTypes;
 
 /**
  * A mixin for components that need to know the path, routes, URL
@@ -10,7 +12,7 @@ var { object } = React.PropTypes;
  *
  *   import { State } from 'react-router';
  *
- *   var AboutLink = React.createClass({
+ *   var AboutLink = createReactClass({
  *     mixins: [ State ],
  *     render() {
  *       var className = this.props.className;

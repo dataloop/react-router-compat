@@ -1,5 +1,6 @@
 import expect from 'expect';
-import React, { render } from 'react';
+import React, { render } from 'react'
+import createReactClass from 'create-react-class'
 import MemoryHistory from '../MemoryHistory';
 import Router from '../Router';
 import Route from '../Route';
@@ -14,10 +15,10 @@ describe('A Router', function () {
     React.unmountComponentAtNode(div);
   });
 
-  var Component1 = React.createClass({ render() { return null; } });
-  var Component2 = React.createClass({ render() { return null; } });
-  var Component3 = React.createClass({ render() { return null; } });
-  var Component4 = React.createClass({ render() { return null; } });
+  var Component1 = createReactClass({ render() { return null; } });
+  var Component2 = createReactClass({ render() { return null; } });
+  var Component3 = createReactClass({ render() { return null; } });
+  var Component4 = createReactClass({ render() { return null; } });
 
   describe('with a synchronous route config', function () {
     var childRoutes = [

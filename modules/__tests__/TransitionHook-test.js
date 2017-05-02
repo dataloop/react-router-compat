@@ -1,5 +1,6 @@
 import expect from 'expect';
-import React, { render } from 'react';
+import React, { render } from 'react'
+import createReactClass from 'create-react-class'
 import MemoryHistory from '../MemoryHistory';
 import TransitionHook from '../TransitionHook';
 import Router from '../Router';
@@ -10,7 +11,7 @@ describe('TransitionHook', function () {
     var div = document.createElement('div');
     var hookCalled = false;
 
-    var One = React.createClass({
+    var One = createReactClass({
       mixins: [ TransitionHook ],
       routerWillLeave() {
         hookCalled = true;
@@ -20,7 +21,7 @@ describe('TransitionHook', function () {
       }
     });
 
-    var Two = React.createClass({
+    var Two = createReactClass({
       render() {
         return <div>two</div>;
       }

@@ -11,7 +11,7 @@ var { click } = React.addons.TestUtils.Simulate;
 
 describe('A <Link>', function () {
 
-  var Parent = React.createClass({
+  var Parent = createReactClass({
     render() {
       return (
         <div>
@@ -22,13 +22,13 @@ describe('A <Link>', function () {
     }
   });
 
-  var Hello = React.createClass({
+  var Hello = createReactClass({
     render() {
       return <div>Hello {this.props.params.name}!</div>;
     }
   });
 
-  var Goodbye = React.createClass({
+  var Goodbye = createReactClass({
     render() {
       return <div>Goodbye</div>;
     }
@@ -40,7 +40,7 @@ describe('A <Link>', function () {
   });
 
   it('knows how to make its href', function () {
-    var LinkWrapper = React.createClass({
+    var LinkWrapper = createReactClass({
       render() {
         return <Link to="/hello/michael" query={{the: 'query'}}>Link</Link>;
       }
@@ -57,7 +57,7 @@ describe('A <Link>', function () {
   });
 
   it('knows how to make its href with HashHistory', function () {
-    var LinkWrapper = React.createClass({
+    var LinkWrapper = createReactClass({
       render() {
         return <Link to="/hello/michael" query={{the: 'query'}}>Link</Link>;
       }
@@ -74,7 +74,7 @@ describe('A <Link>', function () {
   });
 
   describe('with params', function () {
-    var App = React.createClass({
+    var App = createReactClass({
       render() {
         return (
           <div>
@@ -116,7 +116,7 @@ describe('A <Link>', function () {
 
   describe('when its route is active and className is empty', function () {
     it('it shouldn\'t have an active class', function (done) {
-      var LinkWrapper = React.createClass({
+      var LinkWrapper = createReactClass({
         render() {
           return (
             <div>
@@ -160,7 +160,7 @@ describe('A <Link>', function () {
 
   describe('when its route is active', function () {
     it('has its activeClassName', function (done) {
-      var LinkWrapper = React.createClass({
+      var LinkWrapper = createReactClass({
         render() {
           return (
             <div>
@@ -202,7 +202,7 @@ describe('A <Link>', function () {
     });
 
     it('has its activeStyle', function (done) {
-      var LinkWrapper = React.createClass({
+      var LinkWrapper = createReactClass({
         render() {
           return (
             <div>
@@ -246,7 +246,7 @@ describe('A <Link>', function () {
 
   describe('when clicked', function () {
     it('calls a user defined click handler', function (done) {
-      var LinkWrapper = React.createClass({
+      var LinkWrapper = createReactClass({
         handleClick(event) {
           event.preventDefault();
           assert.ok(true);
@@ -268,7 +268,7 @@ describe('A <Link>', function () {
     });
 
     it('transitions to the correct route', function (done) {
-      var LinkWrapper = React.createClass({
+      var LinkWrapper = createReactClass({
         handleClick() {
           // just here to make sure click handlers don't prevent it from happening
         },

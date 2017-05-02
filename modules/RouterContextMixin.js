@@ -1,8 +1,9 @@
-import React from 'react';
+import React from 'react'
+import PropTypes from 'prop-types'
 import invariant from 'invariant';
 import { stripLeadingSlashes, stringifyQuery } from './URLUtils';
 
-var { func, object } = React.PropTypes;
+var { func, object } = PropTypes;
 
 function pathnameIsActive(pathname, activePathname) {
   if (stripLeadingSlashes(activePathname).indexOf(stripLeadingSlashes(pathname)) === 0)

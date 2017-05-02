@@ -1,5 +1,6 @@
 import expect from 'expect';
-import React, { render } from 'react';
+import React, { render } from 'react'
+import createReactClass from 'create-react-class'
 import MemoryHistory from '../MemoryHistory';
 import Router from '../Router';
 import Route from '../Route';
@@ -16,13 +17,13 @@ describe('transitionTo', function () {
 
   describe('when the target path contains a colon', function () {
     it('works', function (done) {
-      var Index = React.createClass({
+      var Index = createReactClass({
         render() {
           return <h1>Index</h1>;
         }
       });
 
-      var Home = React.createClass({
+      var Home = createReactClass({
         render() {
           return <h1>Home</h1>;
         }

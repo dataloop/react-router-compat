@@ -1,5 +1,6 @@
 import expect from 'expect';
-import React, { render } from 'react';
+import React, { render } from 'react'
+import createReactClass from 'create-react-class'
 import HashHistory from '../HashHistory';
 import { getWindowScrollPosition } from '../DOMUtils';
 import Router from '../Router';
@@ -11,7 +12,7 @@ describe('Scroll management', function () {
     node = document.createElement('div');
     document.body.appendChild(node);
 
-    Home = React.createClass({
+    Home = createReactClass({
       render() {
         return (
           <div>
@@ -22,7 +23,7 @@ describe('Scroll management', function () {
       }
     });
 
-    Inbox = React.createClass({
+    Inbox = createReactClass({
       render() {
         return <p style={{padding: '100px 3000px 3000px 100px'}}>This is the inbox.</p>;
       }

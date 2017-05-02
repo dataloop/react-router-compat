@@ -1,4 +1,6 @@
-import React, { createElement, isValidElement } from 'react';
+import React, { createElement, isValidElement } from 'react'
+import createReactClass from 'create-react-class'
+import PropTypes from 'prop-types'
 import warning from 'warning';
 import invariant from 'invariant';
 import { loopAsync } from './AsyncUtils';
@@ -10,7 +12,7 @@ import ScrollManagementMixin from './ScrollManagementMixin';
 import Location from './Location';
 import Transition from './Transition';
 
-var { arrayOf, func, object } = React.PropTypes;
+var { arrayOf, func, object } = PropTypes;
 
 function runTransition(prevState, routes, location, hooks, callback) {
   var transition = new Transition;
@@ -51,7 +53,7 @@ function runTransition(prevState, routes, location, hooks, callback) {
   });
 }
 
-var Router = React.createClass({
+var Router = createReactClass({
 
   mixins: [ RouterContextMixin, ScrollManagementMixin ],
 

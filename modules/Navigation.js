@@ -1,6 +1,8 @@
-import React from 'react';
+import React from 'react'
+import createReactClass from 'create-react-class'
+import PropTypes from 'prop-types'
 
-var { object } = React.PropTypes;
+var { object } = PropTypes;
 
 /**
  * A mixin for components that modify the URL.
@@ -9,7 +11,7 @@ var { object } = React.PropTypes;
  *
  *   import { Navigation } from 'react-router';
  *
- *   var MyLink = React.createClass({
+ *   var MyLink = createReactClass({
  *     mixins: [ Navigation ],
  *     handleClick(event) {
  *       event.preventDefault();
